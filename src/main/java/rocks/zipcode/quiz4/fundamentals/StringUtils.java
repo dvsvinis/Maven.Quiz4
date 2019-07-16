@@ -11,11 +11,16 @@ public class StringUtils {
     }
 
     public static String capitalizeMiddleCharacter(String str) {
-        return null;
+        char c = getMiddleCharacter(str);
+        char C = Character.toUpperCase(c);
+        String s = Character.toString(C);
+        return s;
     }
 
     public static String lowerCaseMiddleCharacter(String str) {
-        return null;
+        StringBuilder sb = new StringBuilder(str);
+        char ch = Character.toUpperCase(sb.charAt(str.length()/2));
+        return sb.toString();
     }
 
     public static Boolean isIsogram(String str) {
@@ -23,7 +28,11 @@ public class StringUtils {
     }
 
     public static Boolean hasDuplicateConsecutiveCharacters(String str) {
-        return null;
+            for (int i = 0; i < str.length() - 1; i++) {
+            if (str.charAt(i) == str.charAt(i + 1)) {
+                return true;
+            }
+        }return false;
     }
 
     public static String removeConsecutiveDuplicateCharacters(String str) {
