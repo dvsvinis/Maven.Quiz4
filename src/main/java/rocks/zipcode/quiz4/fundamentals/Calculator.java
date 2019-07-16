@@ -21,7 +21,11 @@ public class Calculator {
     }
 
     public static Double[] squares(Double... values) {
-        return null;
+        Double[] array = new Double[values.length];
+        for (int i = 0; i < values.length; i++){
+            array[i] = square(values[i]);
+        }
+        return array;
     }
 
     public static Double add(Double value1, Double value2) {
