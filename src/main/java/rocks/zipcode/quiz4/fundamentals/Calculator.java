@@ -9,7 +9,7 @@ public class Calculator {
     }
 
     public static Double square(Double value) {
-        return null;
+        return value * value;
     }
 
     public static Double[] squareRoots(Double... value) {
