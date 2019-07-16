@@ -16,7 +16,16 @@ public class ArrayUtils {
     }
 
     public static String[] removeMiddleElement(String[] values) {
-        return null;
+        ArrayList<String> newList = new ArrayList<String>();
+        int middle = values.length/2;
+        for (int i = 0; i < middle; i++) {
+            newList.add(values[i]);
+        }
+        for (int i = middle + 1; i < values.length; i++){
+            newList.add(values[i]);
+        }
+        String[] stringArray = newList.toArray(new String[0]);
+        return stringArray;
     }
 
 
