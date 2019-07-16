@@ -13,7 +13,11 @@ public class Calculator {
     }
 
     public static Double[] squareRoots(Double... value) {
-        return null;
+        Double[] array = new Double[value.length];
+        for (int i = 0; i < value.length; i++){
+            array[i] = squareRoot(value[i]);
+        }
+        return array;
     }
 
     public static Double[] squares(Double... values) {
